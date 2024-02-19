@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https//:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form method="POST" th:object="${myEmployee}" th:action="@{/prepareResult}">
+      <input type="text" th:field="*{firstName}">Enter FirstName</input>
+      <input type="text" th:field="*{lastName}">Enter lastName</input>
+      <input type="radio" th:field="*{favouriteLanguage}" th:value="Java">Java</input>
+      <input type="radio" th:field="*{favouriteLanguage}" th:value="Python">Python</input>
+      <input type="radio" th:field="*{favouriteLanguage}" th:value="C">C++</input>
+      <input type="submit" >Submit</input>
+  </form>
+</body>
+</html>

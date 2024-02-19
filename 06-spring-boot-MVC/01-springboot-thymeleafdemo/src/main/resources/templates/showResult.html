@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https//:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+ <div>
+     <p class="ptag">The name of the User is <span th:text="${myEmployee.firstName} + ' ' + ${myEmployee.lastName}"/></p>
+    Favourite Programming Language <span th:text="${myEmployee.favouriteLanguage}"></span>
+ </div>
+</body>
+</html>

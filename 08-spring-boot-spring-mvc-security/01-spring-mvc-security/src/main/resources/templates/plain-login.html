@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring=security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <p>Hey welcome to our page</p>
+ <div th:if="${param.logout}">
+
+     <div class="alert alert-success col-xs-offset-1 col-xs-10">
+
+         Invalid username and password.
+     </div>
+ </div>
+<form method="POST" th:action="@{/logout}" >
+
+    <input type="submit">logout
+</form>
+<p>
+    <span sec:authentication="principal.username"></span>
+    <span sec:authentication="principal.authorities"></span>
+    <div sec:authorize="hasRole('MANAGER')">
+    <a th:href="@{/OrdersInfo}">Order Page</a>
+ </div>
+    <br/><br/>
+ <div sec:authorize="hasRole('ADMIN')">
+    <a th:href="@{/SystematicPerformation}">Systematic Page</a>
+ </div>
+</p>
+</body>
+</html>

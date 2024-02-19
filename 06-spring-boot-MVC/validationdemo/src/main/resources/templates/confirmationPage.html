@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+The Customer is verified. <span  th:text="${customer.firstName} + 'The last name' +  ${customer.lastName}"></span>
+<br><br>
+<span  th:text="${customer.freeTicket}+ ' ' +'Free Ticket has been successfully Selected'"></span>
+<br><br>
+<span  th:text="${customer.postalCode}+ ' ' +'Postal Code has been successfully Generated'"></span>
+<br><br>
+<span  th:text="${customer.makeItWork}+ ' ' +'Make It Work has been successfully succeed'"></span>
+</body>
+</html>
